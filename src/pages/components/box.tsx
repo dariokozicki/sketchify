@@ -1,6 +1,6 @@
-import { useFrame, Vector3 } from "@react-three/fiber";
+import { useFrame, type Vector3 } from "@react-three/fiber";
 import { useRef, useState } from "react";
-import { BufferGeometry, Material, Mesh } from "three";
+import type { Mesh } from "three";
 
 type BoxProps = {
   position: Vector3;
@@ -8,7 +8,7 @@ type BoxProps = {
 
 const Box: React.FC<BoxProps> = (props) => {
   // This reference will give us direct access to the mesh
-  const mesh = useRef<Mesh>(null!);
+  const mesh = useRef<Mesh>(null);
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
@@ -22,9 +22,9 @@ const Box: React.FC<BoxProps> = (props) => {
       {...props}
       ref={mesh}
       scale={active ? 1.5 : 1}
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}
+      onClick={() => setActive(!active)}
+      onPointerOver={() => setHover(true)}
+      onPointerOut={() => setHover(false)}
     >
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={hovered ? "hotpink" : "orange"} />
