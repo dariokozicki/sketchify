@@ -1,0 +1,27 @@
+@import "styles/variables";
+
+.Title {
+  font-family: $font-family;
+  color: $rose;
+  &.Large {
+    font-size: 3rem;
+  }
+  &.Medium {
+    font-size: 2.5rem;
+  }
+  &.Small {
+    font-size: 1.5rem;
+  }
+
+  &.Bold {
+    font-weight: bold;
+  }
+
+  &.Regular {
+    font-weight: normal;
+  }
+}
+
+.Body {
+  font-family: $font-family;
+}

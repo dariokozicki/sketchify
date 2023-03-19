@@ -1,0 +1,14 @@
+@import "styles/form";
+
+.MenuItem {
+  :global(.p-menuitem-link) {
+    @extend .Title;
+    @extend .Medium;
+    @extend .Bold;
+
+    :global(.p-menuitem-icon) {
+      font-size: x-large;
+      margin-right: 0.5rem;
+    }
+  }
+}

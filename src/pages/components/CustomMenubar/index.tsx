@@ -1,5 +1,6 @@
 import { Menubar } from "primereact/menubar";
 import { MenuItem } from "primereact/menuitem";
+import styles from "./styles.module.scss";
 
 export const CustomMenubar = () => {
   const items: MenuItem[] = [
@@ -13,11 +14,11 @@ export const CustomMenubar = () => {
       icon: "pi pi-question-circle",
       command: () => console.log("hola mundo"),
     },
-  ];
+  ].map((item) => ({ ...item, className: styles.MenuItem }));
 
   return (
     <div className="mx-auto w-2/4">
-      <Menubar model={items} />;
+      <Menubar model={items} />
     </div>
   );
 };
