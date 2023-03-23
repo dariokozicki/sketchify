@@ -5,3 +5,9 @@
   src: local("HelveticaNeue"),
     url("/assets/fonts/helveticaneue.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "SplineSans";
+  src: local("SplineSans"),
+    url("/assets/fonts/SplineSans-VariableFont_wght.ttf") format("truetype");
+}

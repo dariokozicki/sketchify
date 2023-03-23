@@ -4,6 +4,10 @@ import { type AppType } from "next/app";
 import "styles/fonts.scss";
 import "styles/globals.css";
 import { trpc } from "../utils/trpc";
+import "styles/form.scss";
+import { Lexend } from "@next/font/google";
+
+const lexend = Lexend({ subsets: ["latin"] });
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -11,7 +15,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <main className={lexend.className}>
+        <Component {...pageProps} />
+      </main>
     </SessionProvider>
   );
 };
