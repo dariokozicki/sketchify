@@ -13,9 +13,14 @@ const Landing: NextPage = () => {
           href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&family=Syncopate&display=swap"
           rel="stylesheet"
         />
+        <script
+          src="//code.tidio.co/lvi3v0q215pzc0dcpn7z3yhx319o5uzv.js"
+          async
+        ></script>
       </Head>
-      <div className=" h-screen w-screen bg-[#0E1129]">
+      <div className="min-w-screen relative min-h-screen w-full bg-[#0E1129]">
         <CustomMenubar />
+
         <Scene />
       </div>
     </>

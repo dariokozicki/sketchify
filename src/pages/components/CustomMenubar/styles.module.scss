@@ -1,7 +1,12 @@
 @import "styles/mixins";
 
 .Menubar {
-  width: fit-content;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 9999;
+  transform: translate(-50%, 0);
+  width: 50%;
   padding: 1rem 2rem;
   margin: 0 auto;
   background: rgba($color-palatinate-blue, 0.1);
